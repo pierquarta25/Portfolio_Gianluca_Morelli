@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
       <div
-        className="absolute inset-0 bg-[url('/media/banner2.jpg')] bg-cover bg-[position:90%_center] md:bg-center bg-no-repeat"
+        className="absolute inset-0 bg-[url('/media/banner2.jpg')] bg-cover bg-[position:86.5%_center] md:bg-center bg-no-repeat"
       />
       <div className="absolute inset-0 bg-background/50 md:bg-background/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent md:bg-none" />
