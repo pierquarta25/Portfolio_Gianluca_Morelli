@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Mail } from "lucide-react";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -53,24 +54,49 @@ export function Navbar() {
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <nav className="flex flex-col gap-4 mt-8">
+            <SheetContent side="right" className="w-full sm:w-[400px] bg-background/95 backdrop-blur-xl border-l-border/40 p-8 flex flex-col">
+              <SheetTitle className="sr-only">Menu di Navigazione</SheetTitle>
+              
+              <div className="flex justify-start mb-12 mt-4">
+                <Image 
+                  src="/media/gianluca-morelli-logo-v2.png" 
+                  alt="Gianluca Morelli" 
+                  width={150} 
+                  height={40} 
+                  className="h-8 w-auto object-contain"
+                  unoptimized
+                />
+              </div>
+
+              <nav className="flex flex-col gap-6 flex-1">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="block px-2 py-2 text-lg font-medium hover:text-primary"
+                    className="text-4xl font-black uppercase tracking-tighter text-foreground/80 hover:text-primary transition-all duration-300 hover:translate-x-2"
                   >
                     {link.name}
                   </Link>
                 ))}
-                <div className="mt-4 flex">
-                  <Link href="/contatti" className={buttonVariants({ variant: "default", className: "w-full rounded-full" })}>
-                    Inizia Ora
+              </nav>
+
+              <div className="mt-auto flex flex-col gap-8 pb-8">
+                <Link href="/contatti" className={buttonVariants({ variant: "default", size: "lg", className: "w-full rounded-full text-lg h-14" })}>
+                  Inizia Ora
+                </Link>
+
+                <div className="flex gap-6 justify-center">
+                  <Link href="https://www.instagram.com/gianluca_morelli_ifbb_elitepro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <FaInstagram className="h-7 w-7" />
+                  </Link>
+                  <Link href="https://wa.me/3277819482" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <FaWhatsapp className="h-7 w-7" />
+                  </Link>
+                  <Link href="mailto:Gianlucamorell90@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    <Mail className="h-7 w-7" />
                   </Link>
                 </div>
-              </nav>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
