@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -10,11 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="inline-block mb-4">
-              <Image 
-                src="/media/gianluca-morelli-logo-v2.png" 
-                alt="Gianluca Morelli" 
-                width={180} 
-                height={48} 
+              <Image
+                src="/media/gianluca-morelli-logo-v2.png"
+                alt="Gianluca Morelli"
+                width={180}
+                height={48}
                 className="h-10 w-auto object-contain"
                 quality={100}
                 unoptimized
@@ -29,16 +29,16 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Link Utili</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="#about" className="hover:text-primary transition-colors">Chi Sono</Link>
+                <Link href="/chi-sono" className="hover:text-primary transition-colors">Chi Sono</Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-primary transition-colors">Servizi</Link>
+                <Link href="/servizi" className="hover:text-primary transition-colors">Servizi</Link>
               </li>
               <li>
-                <Link href="#results" className="hover:text-primary transition-colors">Risultati</Link>
+                <Link href="/risultati" className="hover:text-primary transition-colors">Risultati</Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-primary transition-colors">Contatti</Link>
+                <Link href="/contatti" className="hover:text-primary transition-colors">Contatti</Link>
               </li>
             </ul>
           </div>
@@ -50,11 +50,11 @@ export function Footer() {
                 <FaInstagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <FaFacebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
+              <Link href="https://wa.me/3277819482" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <FaWhatsapp className="h-5 w-5" />
+                <span className="sr-only">WhatsApp</span>
               </Link>
-              <Link href="mailto:info@gianlucamorelli.it" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="mailto:Gianlucamorell90@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>
@@ -62,7 +62,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground flex flex-col items-center justify-center gap-4">
+          <Link 
+            href="https://www.getpierfilippo.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-xs uppercase tracking-widest font-semibold opacity-80 hover:opacity-100 transition-opacity"
+          >
+            <span>Created by</span>
+            <Image
+              src="/media/creator-icon.svg"
+              alt="Creator"
+              width={150}
+              height={48}
+              className="h-12 w-auto"
+              unoptimized
+            />
+          </Link>
           <p>&copy; {new Date().getFullYear()} Gianluca Morelli. Tutti i diritti riservati.</p>
         </div>
       </div>

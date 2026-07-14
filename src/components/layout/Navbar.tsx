@@ -5,9 +5,10 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Menu } from "lucide-react";
 
 const NAV_LINKS = [
-  { name: "Chi Sono", href: "#about" },
-  { name: "Servizi", href: "#services" },
-  { name: "Risultati", href: "#results" },
+  { name: "Home", href: "/" },
+  { name: "Chi Sono", href: "/chi-sono" },
+  { name: "Servizi", href: "/servizi" },
+  { name: "Risultati", href: "/risultati" },
 ];
 
 export function Navbar() {
@@ -40,7 +41,7 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link href="#contact" className={buttonVariants({ variant: "default", className: "rounded-full px-6" })}>
+          <Link href="/contatti" className={buttonVariants({ variant: "default", className: "rounded-full px-6" })}>
             Inizia Ora
           </Link>
         </nav>
@@ -65,7 +66,7 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="mt-4 flex">
-                  <Link href="#contact" className={buttonVariants({ variant: "default", className: "w-full rounded-full" })}>
+                  <Link href="/contatti" className={buttonVariants({ variant: "default", className: "w-full rounded-full" })}>
                     Inizia Ora
                   </Link>
                 </div>
