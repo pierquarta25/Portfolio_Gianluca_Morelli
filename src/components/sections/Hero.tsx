@@ -9,8 +9,8 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-[url('/media/banner2.jpg')] bg-cover bg-center bg-no-repeat"
       />
-      <div className="absolute inset-0 bg-background/80 md:bg-background/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent md:bg-none" />
+      <div className="absolute inset-0 bg-background/50 md:bg-background/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent md:bg-none" />
       <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
       
       <div className="container relative z-10 mx-auto px-4 text-center md:text-left">
